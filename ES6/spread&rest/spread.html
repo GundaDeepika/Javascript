@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const setone = ['skdjf', 'ekfi', 'rhvn', 'tjvm', 'rpwwc'];
+        const settwo = ['de', 'tr', 'tk', 'or'];
+        
+        const allset = [...setone, ...settwo];
+        console.log(allset);
+    
+    
+        const person = {
+            name: 'sham',
+            age: 25,
+            place: 'Atp',
+        };
+
+        //copy of the object
+        const copyperson = {...person};
+
+        person.name = 'ram';
+        console.log("The person", person);
+        console.log("The person name from copy", copyperson);
+    
+    </script>
+    <h1>Spread Operator</h1>
+</body>
+</html>
