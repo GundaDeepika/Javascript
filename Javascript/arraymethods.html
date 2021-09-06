@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var work = ['Talking' ,'writing' ,'Eating', 'Sleeping' ,'Washing' ,'Learning' ,'Planting'];
+
+        work.push('Meeting'); //metting is added at last index of array
+        document.write(work);
+        console.log(work);
+        
+        work.pop();  //last item gets deleted
+        document.write(work);
+
+        work.unshift('crying', 'dancing');
+        document.write(work);
+
+        work.shift();
+        document.write(work);
+
+        var isdrawing = work.includes("drawing");
+        document.write(isdrawing);
+
+        var isIndexofarray = work.indexOf('Sleeping');
+        document.write('The index of sleeping is ',isIndexofarray);
+
+        var isworkarray = Array.isArray(work);
+        document.write('The given data is ',isworkarray);
+
+        var iseating = work.includes('Eating' ,2);
+        document.write('Eating in above array index', iseating);
+
+        //add the elements in between the array elements
+        var tojoinarray = work.join('~ *~');
+        document.write('The array is like', tojoinarray);
+
+        //to modify the array
+            //first index: is to start
+            //second index: is to delete the count
+            //third index: is to add the items for the delete place
+            var aftersplice = work.splice(2,2);
+            document.write('spliced elements' ,aftersplice);
+            document.write('After splicing', work);
+
+        //to create
+          //the slice() method returns the selected elements in an array
+          //as a new array object. The slice() method selects the elements starting 
+          //at the given start argument,,,note: The original array will not be changed.
+        var afterslice = work.slice(2,4);
+        document.write('After slice the array looks like', afterslice ); 
+
+        forEach(callback(value, index))
+        work.forEach(elements => console.log(elements));
+
+        /*map((callback(value, index)))
+        var newarr=work.map(callback(val,index){
+            return {key: index, value:val*val};
+        })
+        document.write(newarr);*/
+
+        filter((callback(value, index)))
+        var filtered=work.filter(work => work.length>7);   //above 7letters words are getting
+        console.log(filtered);
+
+
+    </script>
+</body>
+</html>
