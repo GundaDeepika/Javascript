@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = [3, 10, 5, 43,7];
+        var afterfilter = num.filter(function(val,index){
+            console.log(Object);
+                  //console.log(val);
+                  
+            if(val>8){
+                return true;
+            }
+            else{
+                return false;
+            }
+        })
+        console.log("before filter",num);
+        console.log('After filtering', afterfilter);
+
+
+
+        //using arrow function--single line
+        //js engine adds the return statement
+        var afterfilter = num.filter(val => val>20);
+        console.log(afterfilter);
+
+
+        //map
+        var num = [10, 40, 20, 59, 30,54];
+        var mappednums = num.map(function(value,index){
+            value=value+5;
+            return value;
+        })
+        console.log('before mapped', num);
+        console.log('Aftermapped', mappednums);
+    </script>
+</body>
+</html>

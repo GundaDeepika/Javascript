@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         
+         //forEach loop
+         var names=['cat', 'dog','snake','hen','duck'];
+
+         //names.forEach(function(value,index){})
+         names.forEach(function(animal,index){
+             console.log(index);
+             console.log(animal);
+         });
+
+
+         var names=['cat', 'dog','snake','hen','duck'];
+         //for(keyword variable name of arrayname)
+         for(var test of names){
+             console.log('These are',test);////we get only the values
+             //console.log(names[test]);
+            }
+        
+        
+        //forIn loop(with arrays)
+        var names = ['cat', 'dog','snake','hen','duck'];
+        for(var demo in names){
+            console.log('The forIn values are', demo);   //stores only index
+            console.log(names[demo]);    //stores both value and index
+
+        }
+
+        //forIn loop(for objects)
+        var details = {
+            name: 'sunny',
+            age: 20,
+            place: 'Anantapur',
+        }
+
+
+        for(var key in details){
+            console.log('Key is', key);     //we get only keys
+            console.log("Details are",details[key]);      //we get both key and value
+        }
+
+    </script>
+</body>
+</html>
